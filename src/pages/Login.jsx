@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SERVER_URL from "../services/serverURL";
 
 const Login = () => {
@@ -9,25 +9,6 @@ const Login = () => {
   const [message, setMessage] = useState("");
   const navigate = useNavigate(); 
 
-  // const handleLogin = async (e) => {
-  //   e.preventDefault();
-    
-  //   try {
-  //     const response = await axios.post("http://localhost:5000/auth/login", {
-  //       email,
-  //       password,
-  //     });
-
-  //     if (response.status === 200) {
-  //       localStorage.setItem("token", response.data.token); // Store token
-  //       localStorage.setItem("user", JSON.stringify(response.data.user)); // Store user details
-  //       setMessage("Login successful!");
-  //       navigate("/home"); // Redirect after login
-  //     }
-  //   } catch (error) {
-  //     setMessage("Invalid email or password");
-  //   }
-  // };
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -89,7 +70,7 @@ const Login = () => {
         </form>
         {message && <p>{message}</p>} 
 
-        <p>new User register here <a href="/register">Register</a>
+        <p>new User register here <Link to="/register">Register</Link>
         </p>
      </div>
     </div>

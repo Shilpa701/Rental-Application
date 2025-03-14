@@ -2,7 +2,7 @@
 // src/components/Register.js
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import SERVER_URL from '../services/serverURL';
 
 const Register = () => {
@@ -67,7 +67,7 @@ const Register = () => {
           <button className='mt-3 btn-primary' type="submit" >Register</button>
         </form>
         {message && <p>{message}</p>}
-        <p>Already a User?<a href="/login">Login</a></p>
+        <p>Already a User?<Link to="/login">Login</Link></p>
       </div>
     </div>
   );
