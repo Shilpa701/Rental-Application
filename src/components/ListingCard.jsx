@@ -14,15 +14,7 @@ const ListingCard = ({ listingId, listingPhotoPaths, city, country, category, ty
   // const isInWishlist = wishlist.some((item) => item.id === listingId);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // const goToNextSlide = (e) => {
-  //   e.stopPropagation();
-  //   setCurrentIndex((prev) => (prev + 1) % listingPhotoPaths.length);
-  // };
 
-  // const goToPrevSlide = (e) => {
-  //   e.stopPropagation();
-  //   setCurrentIndex((prev) => (prev - 1 + listingPhotoPaths.length) % listingPhotoPaths.length);
-  // };
 
   const goToNextSlide = (e) => {
     e.stopPropagation();
@@ -60,44 +52,7 @@ const ListingCard = ({ listingId, listingPhotoPaths, city, country, category, ty
   };
 
 
-  // const toggleWishlist = (e) => {
-  //   e.stopPropagation();
-  //   if (isInWishlist) {
-  //     removeFromWishlist(listingId);
-  //   } else {
-  //     addToWishlist({
-  //       listingId,
-  //       listingPhotoPaths,
-  //       city,
-  //       country,
-  //       category,
-  //       type,
-  //       price,
-  //       booking,
-  //     });
-  //     alert("Added to wishlist!");
-  //   }
-  // };
 
-  // const toggleWishlist = async (e) => {
-  //   e.stopPropagation();
-  
-  //   if (isInWishlist) {
-  //     await removeFromWishlist(listingId);
-  //     alert("Removed from wishlist!");
-  //   } else {
-  //     await addToWishlist({
-  //       id: listingId, // ✅ Ensure id matches backend expectation
-  //       title: `${category} - ${type}`,
-  //       city,
-  //       country,
-  //       price,
-  //      listingPhotoPaths, // ✅ Take first image for display
-  //       booking,
-  //     });
-  //     alert("Added to wishlist!");
-  //   }
-  // };
   
   
   

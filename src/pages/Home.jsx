@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom';
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { FaCheckCircle } from "react-icons/fa";
 import axios from "axios";
+import SERVER_URL from '../services/serverURL.js';
 
 const Home = () => {
   const [username, setUsername] = useState("");
@@ -25,7 +26,7 @@ const Home = () => {
 
   const fetchReviews = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/test/all-approved-feedback");
+      const response = await axios.get(`${SERVER_URL}/test/all-approved-feedback`);
       console.log("API Response:", response.data); // Debugging log
       setReviews(response.data);
     } catch (error) {
@@ -172,7 +173,6 @@ We ensure a smooth and secure experience with safe sign-up and login using JWT a
      <Link to='/properties' className='btn btn-link mt-5'>CLICK HERE TO VIEW PROPERTIES...</Link>
     
      </div>
-     <a className='btn btn-primary' href="/properties">Check more...</a>
 
 
      {/* Reviews */}

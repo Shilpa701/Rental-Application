@@ -12,7 +12,9 @@ createRoot(document.getElementById('root')).render(
     <StrictMode>
  <AuthContextAPI>
        <BrowserRouter> 
-       <WishlistProvider>  <App /></WishlistProvider>
+       <WishlistProvider> 
+         <App />
+         </WishlistProvider>
         </BrowserRouter>
   </AuthContextAPI>
   

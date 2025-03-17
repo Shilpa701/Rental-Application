@@ -17,7 +17,7 @@ const Footer = () => {
         {/* Links */}
          <div className='d-flex flex-column'>
              <h5 className='text-dark'>Links</h5>
-              <Link to={'/'} style={{textDecoration:'none',color:'grey'}}>Home</Link>
+              <Link to={'/home'} style={{textDecoration:'none',color:'grey'}}>Home</Link>
               <Link to={'/login'} style={{textDecoration:'none',color:'grey'}}>Login</Link>
               <Link to={'/register'} style={{textDecoration:'none',color:'grey'}}>Register</Link>
               <Link to={'/createlist'} style={{textDecoration:'none',color:'grey'}}>Listing</Link>

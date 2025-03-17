@@ -13,21 +13,8 @@ const PropertyList = () => {
   const [propertyList, setPropertyList] = useState([]);
   const navigate = useNavigate();
 
-  // const getPropertyList = async () => {
-  //   try {
-  //     const response = await fetch("http://localhost:5000/properties");
-  //     if (!response.ok) {
-  //       throw new Error("Failed to fetch properties");
-  //     }
-  //     const data = await response.json();
-  //     setPropertyList(data);
-  //   } catch (err) {
-  //     console.error("Fetch all properties failed", err.message);
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
 
+ 
   const getPropertyList = async () => {
     setLoading(true);
     try {
