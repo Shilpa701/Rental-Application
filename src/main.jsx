@@ -4,19 +4,19 @@ import './index.css'
 import App from './App.jsx'
 import './bootstrap.min.css'
 import { BrowserRouter } from 'react-router-dom'
-import AuthContextAPI from './contexts/AuthContextAPI.jsx';  // ✅ Default import (no {})
+// import AuthContextAPI from './contexts/AuthContextAPI.jsx';  // ✅ Default import (no {})
 import { WishlistProvider } from './contexts/WishlistContext.jsx'
-
+import { AuthProvider } from './contexts/AuthContextAPI.jsx'
 createRoot(document.getElementById('root')).render(
 
     <StrictMode>
- <AuthContextAPI>
+ {/* <AuthContextAPI> */}
        <BrowserRouter> 
        <WishlistProvider> 
-         <App />
+      <AuthProvider>   <App /></AuthProvider>
          </WishlistProvider>
         </BrowserRouter>
-  </AuthContextAPI>
+  {/* </AuthContextAPI> */}
   
     </StrictMode>,
 

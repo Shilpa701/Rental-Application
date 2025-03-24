@@ -48,11 +48,35 @@ export const verifyOtpAPI = async (reqBody) => {
 //   };
 
 
+// export const isAuthenticatedAPI = async () => {
+//   return await commonAPI("GET", `${SERVER_URL}/api/auth/is-auth, null`, { 
+//     Authorization: `Bearer ${token}`,
+//   });
+// };
+
+
 export const isAuthenticatedAPI = async () => {
-  return await commonAPI("GET", `${SERVER_URL}/api/auth/is-auth, null`, { 
-    Authorization: `Bearer ${token}`,
-  });
+  const token = localStorage.getItem("token");
+  
+  if (!token) {
+    console.log("No token found in localStorage");
+    return { success: false };
+  }
+
+  try {
+    const response = await commonAPI("GET", `${SERVER_URL}/api/auth/is-auth`, null, {
+      Authorization: `Bearer ${token}`, // ✅ Correct header format
+    });
+
+    console.log("Auth check response:", response); // ✅ Debugging
+
+    return response;
+  } catch (error) {
+    console.error("Auth check failed:", error);
+    return { success: false };
+  }
 };
+
 
 
 

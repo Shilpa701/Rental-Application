@@ -13,7 +13,7 @@ const Users = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await fetch(`${SERVER_URL}/api/users`);
+      const response = await fetch(`${SERVER_URL}/api/users/user`);
       if (!response.ok) throw new Error("Failed to fetch users");//  // API call
       const data = await response.json();
       setUsers(data); // Update state with user data
